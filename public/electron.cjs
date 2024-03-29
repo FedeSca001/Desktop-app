@@ -2,8 +2,10 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
-const path = require('path');
+//llamo al servidor
+require('./server.js');
 
+const path = require('path');
 let mainWindow;
 
 function createWindow() {
