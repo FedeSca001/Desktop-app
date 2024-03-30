@@ -20,7 +20,7 @@ router.get('/holamundo', async (req, res) => {
 
 router.get('/db/usuarios', async (req, res) => {
   try {
-      const [rows] = await pool.promise().query('SELECT * FROM Usuarios'); // Usa pool.promise().query() en lugar de pool.query()
+      const [rows] = await pool.promise().query('SELECT * FROM Usuarios');
       res.send(rows);
   } catch (error) {
       console.error('Error:', error);
